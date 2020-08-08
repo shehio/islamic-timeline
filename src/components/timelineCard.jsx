@@ -49,13 +49,17 @@ const CardDescription = styled.p`
   text-align: center;
 `
 
-class Comp extends Component {
-    state = { 
-        photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/b/b2/Great_Mosque_of_Kairouan_Panorama_-_Grande_Mosqu%C3%A9e_de_Kairouan_Panorama.jpg',
-        caption: 'Grande Mosque',
-        title: 'Islam in Tunisia',
-        description: 'Aqba ibn Nafea conqured the Amazigh people in North Africa.',
-     }
+class TimelineCard extends Component {
+    constructor(props)
+    {
+      super();
+      this.state = {}
+      this.state.title = props.title;
+      this.state.description = props.description;
+      this.state.photoUrl = props.photoUrl;
+      this.state.caption = props.caption;
+    }
+    
     render() { 
         return (
             <div class="row">
@@ -63,10 +67,10 @@ class Comp extends Component {
                 <div class="col-xs-4 col-s-4 col-md-4 col-lg-4">
                 <CardTitle>{this.state.title}</CardTitle>
                 <CardImageContainer>
-                <ImageContainerDiv>
-                    <Image src={this.state.photoUrl} />
-                    <Caption>{this.state.caption}</Caption>
-                </ImageContainerDiv>
+                  <ImageContainerDiv>
+                      <Image src={this.state.photoUrl} />
+                      <Caption>{this.state.caption}</Caption>
+                  </ImageContainerDiv>
                 </CardImageContainer>
                 <CardDescription>{this.state.description}</CardDescription>
                 </div>
@@ -76,4 +80,4 @@ class Comp extends Component {
     }
 }
  
-export default Comp;
+export default TimelineCard;
