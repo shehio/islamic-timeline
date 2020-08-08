@@ -1,1 +1,1 @@
-# project-strory
+# project-story
