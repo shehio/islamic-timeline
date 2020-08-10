@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 const CardImageContainer = styled.div`
   text-align: center;
@@ -62,9 +62,9 @@ class TimelineCard extends Component {
     
     render() { 
         return (
-            <div class="row">
-                <div class="col-xs-4 col-s-4 col-md-4 col-lg-4"> </div>
-                <div class="col-xs-4 col-s-4 col-md-4 col-lg-4">
+            <div className="row">
+                <div className="col-xs-4 col-s-4 col-md-4 col-lg-4"> </div>
+                <div className="col-xs-4 col-s-4 col-md-4 col-lg-4">
                 <CardTitle>{this.state.title}</CardTitle>
                 <CardImageContainer>
                   <ImageContainerDiv>
@@ -74,7 +74,7 @@ class TimelineCard extends Component {
                 </CardImageContainer>
                 <CardDescription>{this.state.description}</CardDescription>
                 </div>
-                <div class="col-xs-4 col-s-4 col-md-4 col-lg-4"> </div>
+                <div className="col-xs-4 col-s-4 col-md-4 col-lg-4"> </div>
             </div>
           )
     }
