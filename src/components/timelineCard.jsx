@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import Markdown from 'react-markdown';
 
 const CardImageContainer = styled.div`
   text-align: center;
@@ -56,27 +57,27 @@ class TimelineCard extends Component {
       this.state = {}
       this.state.title = props.title;
       this.state.description = props.description;
-      this.state.photoUrl = props.photoUrl;
+      this.state.photoURL = props.photoURL;
       this.state.caption = props.caption;
     }
     
-    render() { 
-        return (
-            <div className="row">
-                <div className="col-xs-4 col-s-4 col-md-4 col-lg-4"> </div>
-                <div className="col-xs-4 col-s-4 col-md-4 col-lg-4">
-                <CardTitle>{this.state.title}</CardTitle>
-                <CardImageContainer>
-                  <ImageContainerDiv>
-                      <Image src={this.state.photoUrl} />
-                      <Caption>{this.state.caption}</Caption>
-                  </ImageContainerDiv>
-                </CardImageContainer>
-                <CardDescription>{this.state.description}</CardDescription>
-                </div>
-                <div className="col-xs-4 col-s-4 col-md-4 col-lg-4"> </div>
-            </div>
-          )
+    render() {
+      return (
+          <div className="row">
+              <div className="col-xs-4 col-s-4 col-md-4 col-lg-4"> </div>
+              <div className="col-xs-4 col-s-4 col-md-4 col-lg-4">
+              <CardTitle>{this.state.title}</CardTitle>
+              <CardImageContainer>
+                <ImageContainerDiv>
+                    <Image src={this.state.photoURL} />
+                    <Caption>{this.state.caption}</Caption>
+                </ImageContainerDiv>
+              </CardImageContainer>
+              <CardDescription><Markdown>{this.state.description}</Markdown></CardDescription>
+              </div>
+              <div className="col-xs-4 col-s-4 col-md-4 col-lg-4"> </div>
+          </div>
+        );
     }
 }
  

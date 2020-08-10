@@ -20,7 +20,8 @@ class Timeline extends Component {
 
     render() {
         return (
-        this.state.timelineEvents.map((event, index) => { return <TimelineCard key={index} title={event.title} description={event.description} /> })
+        this.state.timelineEvents.map((event, index) => 
+        { return <TimelineCard key={index} title={event.title} description={event.description} photoURL={event.photoURL} caption={event.caption}/> })
           );
     }
 }
