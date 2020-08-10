@@ -34,18 +34,6 @@ const CardTitle = styled.h6`
   text-align: center; 
 `
 
-const CardContent = styled.p`
-  font-size: 0.85rem;
-  font-weight: 500;
-  margin: 1em 0 0;
-  line-height: 1.6;
-  color: rgba(0,0,0,1);
-  a {
-    font-weight: bold;
-    color: rgba(0,0,128,1);
-  }  
-`
-
 const CardDescription = styled.p`
   text-align: center;
 `
@@ -55,6 +43,7 @@ class TimelineCard extends Component {
     {
       super();
       this.state = {}
+      this.state.key = props.index;
       this.state.title = props.title;
       this.state.description = props.description;
       this.state.photoURL = props.photoURL;
@@ -62,22 +51,61 @@ class TimelineCard extends Component {
     }
     
     render() {
-      return (
-          <div className="row">
-              <div className="col-xs-4 col-s-4 col-md-4 col-lg-4"> </div>
-              <div className="col-xs-4 col-s-4 col-md-4 col-lg-4">
-              <CardTitle>{this.state.title}</CardTitle>
-              <CardImageContainer>
-                <ImageContainerDiv>
-                    <Image src={this.state.photoURL} />
-                    <Caption>{this.state.caption}</Caption>
-                </ImageContainerDiv>
-              </CardImageContainer>
-              <CardDescription><Markdown>{this.state.description}</Markdown></CardDescription>
+      if (this.state.key % 2 == 0){
+        return (
+          <div className="row" >
+            <div className="col-xs-6 col-s-4 col-md-3 col-lg-3" />
+
+            <div className="col-xs-6 col-s-6 col-md-6 col-lg-6" style={{background: '#ffffff', margin: '10px', padding: '5px'}}>
+              <div className="row">
+                <div className="col-xs-6 col-s-6 col-md-6 col-lg-6">
+                  <CardImageContainer>
+                    <ImageContainerDiv>
+                        <Image src={this.state.photoURL} />
+                        <Caption><Markdown>{this.state.caption}</Markdown></Caption>
+                    </ImageContainerDiv>
+                  </CardImageContainer>
+                </div>
+              
+                <div className="col-xs-6 col-s-6 col-md-6 col-lg-6">
+                  <CardTitle>{this.state.title}</CardTitle>
+                  <CardDescription><Markdown>{this.state.description}</Markdown></CardDescription>
+                </div>
               </div>
-              <div className="col-xs-4 col-s-4 col-md-4 col-lg-4"> </div>
+            </div>
+
+            <div className="col-xs-3 col-s-3 col-md-3 col-lg-3" />
           </div>
         );
+      }
+      else {
+        return (
+          <div className="row">
+            <div className="col-xs-3 col-s-3 col-md-3 col-lg-3" />
+
+            <div className="col-xs-6 col-s-6 col-md-6 col-lg-6" style={{background: '#ffffff', margin: '10px', padding: '5px'}}>
+              <div className="row">
+                        
+                <div className="col-xs-6 col-s-6 col-md-6 col-lg-6">
+                  <CardTitle>{this.state.title}</CardTitle>
+                  <CardDescription><Markdown>{this.state.description}</Markdown></CardDescription>
+                </div>
+
+                <div className="col-xs-6 col-s-6 col-md-6 col-lg-6">
+                  <CardImageContainer>
+                    <ImageContainerDiv>
+                        <Image src={this.state.photoURL} />
+                        <Caption><Markdown>{this.state.caption}</Markdown></Caption>
+                    </ImageContainerDiv>
+                  </CardImageContainer>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-xs-3 col-s-3 col-md-3 col-lg-3" />
+          </div>
+        );
+      }
     }
 }
  
