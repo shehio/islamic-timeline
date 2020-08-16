@@ -4,7 +4,7 @@ import TimelineCard from './timelineCard.jsx'
 import styled from 'styled-components';
 
 const Container = styled.div`
-  background-color: #0f0647;
+  background-color: #FCF1ED;
 `
 
 
