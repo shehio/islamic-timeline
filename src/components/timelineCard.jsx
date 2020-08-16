@@ -31,11 +31,32 @@ const CardTitle = styled.h6`
   margin: 10;
   color: rgba(0,0,0,1);
   font-weight: bold;
-  text-align: center; 
+  text-align: center;
+  background-color: #ccccff;
 `
 
 const CardDescription = styled.p`
   text-align: center;
+`
+
+const TimelineContainer = styled.div`
+  background-color: #ffffff;
+`
+
+const MidDiv = styled.div`
+  background-color: lightblue
+`
+
+const InnerRow1 = styled.div`
+  background-image: url("./bg1.jpeg");
+`
+
+const InnerRow2 = styled.div`
+  background-image: url("./bg2.jpeg");
+`
+
+const InnerRow3 = styled.div`
+  background-image: url("./bg3.jpeg");
 `
 
 class TimelineCard extends Component {
@@ -49,63 +70,84 @@ class TimelineCard extends Component {
       this.state.photoURL = props.photoURL;
       this.state.caption = props.caption;
     }
+
+    getInnerRow() {
+      var str = 'InnerRow';
+
+      if (this.state.key % 3 == 0)
+      {
+        return (
+          <InnerRow1 className="row">
+            <div className="col-xs-6 col-s-6 col-md-6 col-lg-6">
+              <CardImageContainer>
+                <ImageContainerDiv>
+                    <Image src={this.state.photoURL} />
+                    <Caption><Markdown>{this.state.caption}</Markdown></Caption>
+                </ImageContainerDiv>
+              </CardImageContainer>
+            </div>
+          
+            <div className="col-xs-6 col-s-6 col-md-6 col-lg-6">
+              <CardTitle>{this.state.title}</CardTitle>
+              <CardDescription><Markdown>{this.state.description}</Markdown></CardDescription>
+            </div>
+          </InnerRow1>
+        );
+      }
+      else if (this.state.key % 3 == 1)
+      {
+        return (
+          <InnerRow2 className="row">
+            <div className="col-xs-6 col-s-6 col-md-6 col-lg-6">
+              <CardImageContainer>
+                <ImageContainerDiv>
+                    <Image src={this.state.photoURL} />
+                    <Caption><Markdown>{this.state.caption}</Markdown></Caption>
+                </ImageContainerDiv>
+              </CardImageContainer>
+            </div>
+          
+            <div className="col-xs-6 col-s-6 col-md-6 col-lg-6">
+              <CardTitle>{this.state.title}</CardTitle>
+              <CardDescription><Markdown>{this.state.description}</Markdown></CardDescription>
+            </div>
+          </InnerRow2>
+        );
+      }
+      else
+      {
+        return (
+          <InnerRow3 className="row">
+            <div className="col-xs-6 col-s-6 col-md-6 col-lg-6">
+              <CardImageContainer>
+                <ImageContainerDiv>
+                    <Image src={this.state.photoURL} />
+                    <Caption><Markdown>{this.state.caption}</Markdown></Caption>
+                </ImageContainerDiv>
+              </CardImageContainer>
+            </div>
+          
+            <div className="col-xs-6 col-s-6 col-md-6 col-lg-6">
+              <CardTitle>{this.state.title}</CardTitle>
+              <CardDescription><Markdown>{this.state.description}</Markdown></CardDescription>
+            </div>
+          </InnerRow3>
+        );
+      }
+    }
     
     render() {
-      if (this.state.key % 2 == 0){
         return (
-          <div className="row" >
+          <TimelineContainer className='row'>
             <div className="col-xs-6 col-s-4 col-md-3 col-lg-3" />
 
-            <div className="col-xs-6 col-s-6 col-md-6 col-lg-6" style={{background: '#ffffff', margin: '10px', padding: '5px'}}>
-              <div className="row">
-                <div className="col-xs-6 col-s-6 col-md-6 col-lg-6">
-                  <CardImageContainer>
-                    <ImageContainerDiv>
-                        <Image src={this.state.photoURL} />
-                        <Caption><Markdown>{this.state.caption}</Markdown></Caption>
-                    </ImageContainerDiv>
-                  </CardImageContainer>
-                </div>
-              
-                <div className="col-xs-6 col-s-6 col-md-6 col-lg-6">
-                  <CardTitle>{this.state.title}</CardTitle>
-                  <CardDescription><Markdown>{this.state.description}</Markdown></CardDescription>
-                </div>
-              </div>
-            </div>
+            <MidDiv className="col-xs-6 col-s-6 col-md-6 col-lg-6" style={{background: '#ffffff', margin: '10px', padding: '5px'}}>
+              {this.getInnerRow()}
+            </MidDiv>
 
             <div className="col-xs-3 col-s-3 col-md-3 col-lg-3" />
-          </div>
+          </TimelineContainer>
         );
-      }
-      else {
-        return (
-          <div className="row">
-            <div className="col-xs-3 col-s-3 col-md-3 col-lg-3" />
-
-            <div className="col-xs-6 col-s-6 col-md-6 col-lg-6" style={{background: '#ffffff', margin: '10px', padding: '5px'}}>
-              <div className="row">
-                        
-                <div className="col-xs-6 col-s-6 col-md-6 col-lg-6">
-                  <CardTitle>{this.state.title}</CardTitle>
-                  <CardDescription><Markdown>{this.state.description}</Markdown></CardDescription>
-                </div>
-
-                <div className="col-xs-6 col-s-6 col-md-6 col-lg-6">
-                  <CardImageContainer>
-                    <ImageContainerDiv>
-                        <Image src={this.state.photoURL} />
-                        <Caption><Markdown>{this.state.caption}</Markdown></Caption>
-                    </ImageContainerDiv>
-                  </CardImageContainer>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-xs-3 col-s-3 col-md-3 col-lg-3" />
-          </div>
-        );
-      }
     }
 }
  
