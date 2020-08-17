@@ -17,6 +17,8 @@ const Image = styled.img`
   width: auto;
   max-width:100%;
   max-height:100%;
+  border-radius: 2px;
+  max-height: 278px;
 `
 
 const Caption = styled.span`
@@ -66,6 +68,14 @@ const TextItems3 = styled.div`
 const InnerRow = styled.div`
 `
 
+const CenteringDiv = styled.div`
+  min-height: 278px;
+  max-height: 278px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
 class TimelineCard extends Component {
     constructor(props)
     {
@@ -104,8 +114,8 @@ class TimelineCard extends Component {
     return (
       <CardImageContainer className="col-xs-5 col-s-5 col-md-5 col-lg-5">
         <ImageContainerDiv>
-            <Image src={this.state.photoURL} style={{maxHeight: 278}} />
-            <Caption><Markdown>{this.state.caption}</Markdown></Caption>
+            <Image src={this.state.photoURL} />
+            {/* <Caption><Markdown>{this.state.caption}</Markdown></Caption> */}
         </ImageContainerDiv>
       </CardImageContainer>
     );
@@ -116,7 +126,7 @@ class TimelineCard extends Component {
       return (
         <TextItems1 className="col-xs-5 col-s-5 col-md-5 col-lg-5">
           <CardTitle>{this.state.title}</CardTitle>
-          <CardDescription><Markdown>{this.state.description}</Markdown></CardDescription>
+          <CenteringDiv><CardDescription><Markdown>{this.state.description}</Markdown></CardDescription></CenteringDiv>
         </TextItems1>
       );
     }
@@ -124,7 +134,7 @@ class TimelineCard extends Component {
       return (
         <TextItems2 className="col-xs-5 col-s-5 col-md-5 col-lg-5">
           <CardTitle>{this.state.title}</CardTitle>
-          <CardDescription><Markdown>{this.state.description}</Markdown></CardDescription>
+          <CenteringDiv><CardDescription><Markdown>{this.state.description}</Markdown></CardDescription></CenteringDiv>
         </TextItems2>
       );
     }
@@ -132,7 +142,7 @@ class TimelineCard extends Component {
       return (
         <TextItems3 className="col-xs-5 col-s-5 col-md-5 col-lg-5">
           <CardTitle>{this.state.title}</CardTitle>
-          <CardDescription><Markdown>{this.state.description}</Markdown></CardDescription>
+          <CenteringDiv><CardDescription><Markdown>{this.state.description}</Markdown></CardDescription></CenteringDiv>
         </TextItems3>
       );
     }
