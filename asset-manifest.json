@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/project-story/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/project-story/static/js/main.d123741c.chunk.js",
-    "main.js.map": "/project-story/static/js/main.d123741c.chunk.js.map",
-    "runtime-main.js": "/project-story/static/js/runtime-main.41bf7d0f.js",
-    "runtime-main.js.map": "/project-story/static/js/runtime-main.41bf7d0f.js.map",
-    "static/css/2.f3cffc9e.chunk.css": "/project-story/static/css/2.f3cffc9e.chunk.css",
-    "static/js/2.a22d53cf.chunk.js": "/project-story/static/js/2.a22d53cf.chunk.js",
-    "static/js/2.a22d53cf.chunk.js.map": "/project-story/static/js/2.a22d53cf.chunk.js.map",
-    "index.html": "/project-story/index.html",
-    "precache-manifest.71a588b194683ab0864396a998de9ae4.js": "/project-story/precache-manifest.71a588b194683ab0864396a998de9ae4.js",
-    "service-worker.js": "/project-story/service-worker.js",
-    "static/css/2.f3cffc9e.chunk.css.map": "/project-story/static/css/2.f3cffc9e.chunk.css.map",
-    "static/css/main.5ecd60fb.chunk.css.map": "/project-story/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.a22d53cf.chunk.js.LICENSE.txt": "/project-story/static/js/2.a22d53cf.chunk.js.LICENSE.txt",
-    "static/media/bg3.jpeg": "/project-story/static/media/bg3.209bad82.jpeg"
+    "main.css": "/islamictimeline/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/islamictimeline/static/js/main.a76b53a6.chunk.js",
+    "main.js.map": "/islamictimeline/static/js/main.a76b53a6.chunk.js.map",
+    "runtime-main.js": "/islamictimeline/static/js/runtime-main.8c3c0a7e.js",
+    "runtime-main.js.map": "/islamictimeline/static/js/runtime-main.8c3c0a7e.js.map",
+    "static/css/2.f3cffc9e.chunk.css": "/islamictimeline/static/css/2.f3cffc9e.chunk.css",
+    "static/js/2.3a6761e3.chunk.js": "/islamictimeline/static/js/2.3a6761e3.chunk.js",
+    "static/js/2.3a6761e3.chunk.js.map": "/islamictimeline/static/js/2.3a6761e3.chunk.js.map",
+    "index.html": "/islamictimeline/index.html",
+    "precache-manifest.38066fdcd677b989ea22b0b5ba6f9685.js": "/islamictimeline/precache-manifest.38066fdcd677b989ea22b0b5ba6f9685.js",
+    "service-worker.js": "/islamictimeline/service-worker.js",
+    "static/css/2.f3cffc9e.chunk.css.map": "/islamictimeline/static/css/2.f3cffc9e.chunk.css.map",
+    "static/css/main.5ecd60fb.chunk.css.map": "/islamictimeline/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.3a6761e3.chunk.js.LICENSE.txt": "/islamictimeline/static/js/2.3a6761e3.chunk.js.LICENSE.txt",
+    "static/media/bg3.jpeg": "/islamictimeline/static/media/bg3.209bad82.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.41bf7d0f.js",
+    "static/js/runtime-main.8c3c0a7e.js",
     "static/css/2.f3cffc9e.chunk.css",
-    "static/js/2.a22d53cf.chunk.js",
+    "static/js/2.3a6761e3.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.d123741c.chunk.js"
+    "static/js/main.a76b53a6.chunk.js"
   ]
 }
