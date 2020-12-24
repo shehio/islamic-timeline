@@ -7,7 +7,6 @@ const Container = styled.div`
   background-color: #FCF1ED;
 `
 
-
 class Timeline extends Component {
     constructor()
     {

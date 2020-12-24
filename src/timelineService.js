@@ -6,7 +6,14 @@ export class FileBasedTimelineService {
   }
 
   async provideTimelineEvents() {
-    var data = await fetch(this.filePath);
+    var data = await fetch(
+      this.filePath,
+      {
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+         }
+      });
     data = await data.text();
     var result = parser.parse(data, {
       header: true,
