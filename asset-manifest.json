@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/islamictimeline/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/islamictimeline/static/js/main.a76b53a6.chunk.js",
-    "main.js.map": "/islamictimeline/static/js/main.a76b53a6.chunk.js.map",
-    "runtime-main.js": "/islamictimeline/static/js/runtime-main.8c3c0a7e.js",
-    "runtime-main.js.map": "/islamictimeline/static/js/runtime-main.8c3c0a7e.js.map",
-    "static/css/2.f3cffc9e.chunk.css": "/islamictimeline/static/css/2.f3cffc9e.chunk.css",
-    "static/js/2.3a6761e3.chunk.js": "/islamictimeline/static/js/2.3a6761e3.chunk.js",
-    "static/js/2.3a6761e3.chunk.js.map": "/islamictimeline/static/js/2.3a6761e3.chunk.js.map",
-    "index.html": "/islamictimeline/index.html",
-    "precache-manifest.38066fdcd677b989ea22b0b5ba6f9685.js": "/islamictimeline/precache-manifest.38066fdcd677b989ea22b0b5ba6f9685.js",
-    "service-worker.js": "/islamictimeline/service-worker.js",
-    "static/css/2.f3cffc9e.chunk.css.map": "/islamictimeline/static/css/2.f3cffc9e.chunk.css.map",
-    "static/css/main.5ecd60fb.chunk.css.map": "/islamictimeline/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.3a6761e3.chunk.js.LICENSE.txt": "/islamictimeline/static/js/2.3a6761e3.chunk.js.LICENSE.txt",
-    "static/media/bg3.jpeg": "/islamictimeline/static/media/bg3.209bad82.jpeg"
+    "main.css": "/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/static/js/main.24ee5f34.chunk.js",
+    "main.js.map": "/static/js/main.24ee5f34.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.90717550.js",
+    "runtime-main.js.map": "/static/js/runtime-main.90717550.js.map",
+    "static/css/2.f3cffc9e.chunk.css": "/static/css/2.f3cffc9e.chunk.css",
+    "static/js/2.d95ab014.chunk.js": "/static/js/2.d95ab014.chunk.js",
+    "static/js/2.d95ab014.chunk.js.map": "/static/js/2.d95ab014.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.0e296f3ac998aae24cd08b57f6e8cbb7.js": "/precache-manifest.0e296f3ac998aae24cd08b57f6e8cbb7.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.f3cffc9e.chunk.css.map": "/static/css/2.f3cffc9e.chunk.css.map",
+    "static/css/main.5ecd60fb.chunk.css.map": "/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.d95ab014.chunk.js.LICENSE.txt": "/static/js/2.d95ab014.chunk.js.LICENSE.txt",
+    "static/media/bg3.jpeg": "/static/media/bg3.209bad82.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8c3c0a7e.js",
+    "static/js/runtime-main.90717550.js",
     "static/css/2.f3cffc9e.chunk.css",
-    "static/js/2.3a6761e3.chunk.js",
+    "static/js/2.d95ab014.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.a76b53a6.chunk.js"
+    "static/js/main.24ee5f34.chunk.js"
   ]
 }
