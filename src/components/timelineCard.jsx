@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Markdown from 'react-markdown';
+import bg1 from './img/bg1.jpeg'
+import bg2 from './img/bg2.jpeg'
+import bg3 from './img/bg3.jpeg'
+
 
 const CardImageContainer = styled.div`
   text-align: center;
@@ -50,17 +54,17 @@ const MidDiv = styled.div`
 `
 
 const TextItems1 = styled.div`
-  background-image: url("./bg1.jpeg");
+  background-image: url(${bg1});
   min-height: 278px;
   max-height: 278px;
 `
 const TextItems2 = styled.div`
-  background-image: url("./bg2.jpeg");
+  background-image: url(${bg2});
   min-height: 278px;
   max-height: 278px;
 `
 const TextItems3 = styled.div`
-  background-image: url("./bg3.jpeg");
+  background-image: url(${bg3});
   min-height: 278px;
   max-height: 278px;
 `
