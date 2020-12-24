@@ -126,7 +126,7 @@ class TimelineCard extends Component {
   }
 
   getTextItems() {
-    if (this.state.key % 3 == 0) {
+    if (this.state.key % 3 === 0) {
       return (
         <TextItems1 className="col-xs-5 col-s-5 col-md-5 col-lg-5">
           <CardTitle>{this.state.title}</CardTitle>
@@ -134,7 +134,7 @@ class TimelineCard extends Component {
         </TextItems1>
       );
     }
-    else if (this.state.key % 3 == 1) {
+    else if (this.state.key % 3 === 1) {
       return (
         <TextItems2 className="col-xs-5 col-s-5 col-md-5 col-lg-5">
           <CardTitle>{this.state.title}</CardTitle>
