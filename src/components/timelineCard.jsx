@@ -36,7 +36,7 @@ const CardTitle = styled.h6`
   color: #b97f68;
 `
 
-const CardDescription = styled.p`
+const CardDescription = styled.div`
   text-align: center;
   color: #b97f68;
 `
