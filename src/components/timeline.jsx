@@ -12,7 +12,7 @@ class Timeline extends Component {
     {
       super();
       this.state = {}
-      this.timelineService = new FileBasedTimelineService('./content.txt');
+      this.timelineService = new FileBasedTimelineService('content.txt');
       this.state.timelineEvents = [];
     }
 

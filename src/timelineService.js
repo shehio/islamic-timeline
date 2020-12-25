@@ -1,4 +1,5 @@
 import parser from 'papaparse';
+import content from './content.js';
 
 export class FileBasedTimelineService {
   constructor(filePath) {
@@ -6,20 +7,13 @@ export class FileBasedTimelineService {
   }
 
   async provideTimelineEvents() {
-    var data = await fetch(
-      this.filePath,
+    var result = parser.parse(
+      content,
       {
-        headers: { 
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-         }
-      });
-    data = await data.text();
-    var result = parser.parse(data, {
       header: true,
       delimiter: '\t',
       skipEmptyLines: true
-    });
+      });
     return result.data;
   }
 }
