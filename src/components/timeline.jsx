@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import { FileBasedTimelineService } from '../timelineService.js'
 import TimelineCard from './timelineCard.jsx'
-import styled from 'styled-components';
-
-const Container = styled.div`
-  background-color: #FCF1ED;
-`
 
 class Timeline extends Component {
     constructor()
@@ -24,11 +19,11 @@ class Timeline extends Component {
 
     render() {
         return (
-          <Container>
+          <div>
             {this.state.timelineEvents.map((event, index) => 
              <TimelineCard key={index} index={index} title={event.title} description={event.description} photoURL={event.photoURL} caption={event.caption}/> )}
-          </Container>
-            );
+          </div>
+        );
     }
 }
  

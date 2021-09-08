@@ -1,89 +1,49 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Markdown from 'react-markdown';
-import bg1 from './img/bg1.jpeg'
-import bg2 from './img/bg2.jpeg'
-import bg3 from './img/bg3.jpeg'
 
-
-const CardImageContainer = styled.div`
-  text-align: center;
-  background-color: '#FCF1ED';
-`
-
-const ImageContainerDiv = styled.div`
-  position: relative;
-  display: inline-block;
+const TimelineCard = styled.div`
+  height: 120vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
+  margin-bottom: 10px;
+  overflow-x: hidden !important;
 `
 
 const Image = styled.img`
-  display: block;
-  width: auto;
-  max-width:100%;
-  max-height:100%;
-  border-radius: 2px;
-  max-height: 278px;
-`
-
-const Caption = styled.span`
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  object-fit: cover;
   width: 100%;
-  background: rgba(0,0,0,.5);
+  height:100%;
+  z-index: -1;
 `
 
-const CardTitle = styled.h6`
-  margin: 10;
-  font-weight: bold;
+const Title = styled.h1`
+  color: #fff;
+  font-size: 30px;
+  margin-top: -550px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
-  color: #b97f68;
 `
 
-const CardDescription = styled.div`
+const Description = styled.p`
+  margin-top: 8px;
   text-align: center;
-  color: #b97f68;
-`
-
-const TimelineItemContainer = styled.div`
-`
-const MidDiv = styled.div`
-  background: #FCF1ED;
-  margin: 10px;
-  padding: 5px;
-`
-
-const TextItems1 = styled.div`
-  background-image: url(${bg1});
-  min-height: 278px;
-  max-height: 278px;
-`
-const TextItems2 = styled.div`
-  background-image: url(${bg2});
-  min-height: 278px;
-  max-height: 278px;
-`
-const TextItems3 = styled.div`
-  background-image: url(${bg3});
-  min-height: 278px;
-  max-height: 278px;
-`
-
-const InnerRow = styled.div`
-`
-
-const CenteringDiv = styled.div`
-  min-height: 278px;
-  max-height: 278px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: #fff;
+  font-size: 21px; 
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: rgba(56, 56, 56, 0.5);
+  margin-left: 10%;
+  margin-right: 10%;
 `
 
 class TimelineCard extends Component {
     constructor(props)
     {
-      super();
+      super()
       this.state = {}
       this.state.key = props.index;
       this.state.title = props.title;
@@ -94,63 +54,13 @@ class TimelineCard extends Component {
     
     render() {
         return (
-          <TimelineItemContainer>
-            <MidDiv>
-              {this.getInnerRow()}
-            </MidDiv>
-          </TimelineItemContainer>
+          <TimelineCard>
+                <Image src={this.state.photoURL} />
+                <Title>{this.state.title}</Title>
+                <Description><Markdown>{this.state.description}</Markdown></Description>
+          </TimelineCard>
         );
     }
-
-    getInnerRow() {
-      return (
-        <InnerRow className="row"> 
-          <div className="col-xs-1 col-s-1 col-md-1 col-lg-1"></div>
-          {this.getImageContainer()}
-          {this.getTextItems()}
-          <div className="col-xs-1 col-s-1 col-md-1 col-lg-1"></div>
-        </InnerRow>
-        );
-    }
-
-  getImageContainer()
-  {
-    return (
-      <CardImageContainer className="col-xs-5 col-s-5 col-md-5 col-lg-5">
-        <ImageContainerDiv>
-            <Image src={this.state.photoURL} />
-            {/* <Caption><Markdown>{this.state.caption}</Markdown></Caption> */}
-        </ImageContainerDiv>
-      </CardImageContainer>
-    );
-  }
-
-  getTextItems() {
-    if (this.state.key % 3 === 0) {
-      return (
-        <TextItems1 className="col-xs-5 col-s-5 col-md-5 col-lg-5">
-          <CardTitle>{this.state.title}</CardTitle>
-          <CenteringDiv><CardDescription><Markdown>{this.state.description}</Markdown></CardDescription></CenteringDiv>
-        </TextItems1>
-      );
-    }
-    else if (this.state.key % 3 === 1) {
-      return (
-        <TextItems2 className="col-xs-5 col-s-5 col-md-5 col-lg-5">
-          <CardTitle>{this.state.title}</CardTitle>
-          <CenteringDiv><CardDescription><Markdown>{this.state.description}</Markdown></CardDescription></CenteringDiv>
-        </TextItems2>
-      );
-    }
-    else {
-      return (
-        <TextItems3 className="col-xs-5 col-s-5 col-md-5 col-lg-5">
-          <CardTitle>{this.state.title}</CardTitle>
-          <CenteringDiv><CardDescription><Markdown>{this.state.description}</Markdown></CardDescription></CenteringDiv>
-        </TextItems3>
-      );
-    }
-  }
 }
- 
+
 export default TimelineCard;
