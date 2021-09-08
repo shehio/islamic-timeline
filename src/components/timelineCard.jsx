@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import Markdown from 'react-markdown';
 
-const TimelineCard = styled.div`
+const Card = styled.div`
   height: 120vh;
   width: 100%;
   display: flex;
@@ -54,11 +54,11 @@ class TimelineCard extends Component {
     
     render() {
         return (
-          <TimelineCard>
+          <Card>
                 <Image src={this.state.photoURL} />
                 <Title>{this.state.title}</Title>
                 <Description><Markdown>{this.state.description}</Markdown></Description>
-          </TimelineCard>
+          </Card>
         );
     }
 }
